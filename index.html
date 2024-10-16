@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="styles.css">
+  <!-- Link to the manifest file -->
+  <link rel="manifest" href="manifest.json">
+
+  <title>Simple Calculator</title>
+<script>
+        // Service Worker Registration
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./service-worker.js')
+                    .then(registration => {
+                        console.log('Service Worker registered with scope:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.error('Service Worker registration failed:', error);
+                    });
+            });
+        }
+    </script>
+
+
+
+</head>
+
+<body>
+
+  <div class="calculator">
+
+    <input type="text" id="display" readonly>
+
+    <div class="buttons">
+
+      <button onclick="appendNumber('7')">7</button>
+
+      <button onclick="appendNumber('8')">8</button>
+
+      <button onclick="appendNumber('9')">9</button>
+
+      <button onclick="setOperator('+')">+</button>
+
+      
+
+      <button onclick="appendNumber('4')">4</button>
+
+      <button onclick="appendNumber('5')">5</button>
+
+      <button onclick="appendNumber('6')">6</button>
+
+      <button onclick="setOperator('-')">-</button>
+
+      
+
+      <button onclick="appendNumber('1')">1</button>
+
+      <button onclick="appendNumber('2')">2</button>
+
+      <button onclick="appendNumber('3')">3</button>
+
+      <button onclick="setOperator('*')">*</button>
+
+      
+
+      <button onclick="appendNumber('0')">0</button>
+
+      <button onclick="clearDisplay()">C</button>
+
+      <button onclick="calculateResult()">=</button>
+
+      <button onclick="setOperator('/')">/</button>
+
+    </div>
+<!-- Copyright Notice -->
+    <div class="copyright">
+        Copyright &copy; Ranjit Singh
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

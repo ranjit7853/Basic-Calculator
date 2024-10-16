@@ -1,0 +1,66 @@
+body {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  height: 100vh;
+
+  margin: 0;
+
+  background-color: #f4f4f4;
+
+}
+
+.calculator {
+
+  text-align: center;
+
+}
+
+#display {
+
+  width: 200px;
+
+  padding: 10px;
+
+  font-size: 18px;
+
+}
+
+.buttons {
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 10px;
+
+  margin-top: 10px;
+
+}
+
+button {
+
+  width: 100%;
+
+  padding: 10px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+}
+
+.copyright {
+    margin-top: 20px; /* Add some space above */
+    font-size: 14px; /* Adjust the font size */
+    color: #333; /* Change the text color */
+    text-align: center; /* Center the text */
+    border-top: 1px solid #4CAF50; /* Add a top border */
+    padding-top: 10px; /* Add some space above the text */
+    font-weight: bold; /* Make the text bold */
+    background-color: #f9f9f9; /* Light background color */
+}
